@@ -1,0 +1,83 @@
+package miPrimeraClase;
+
+import java.util.Scanner;
+
+public class MainAvion {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String menu = "1. Crear aviÃƒÂ³n sÃƒÂ³lo con el identificador \n2. Crear aviÃƒÂ³n con el identificador y la compaÃƒÂ±ÃƒÂ­a.";
+		System.out.println(menu);
+		System.out.println("Introduce la opcion que deseas");
+		int opcion = Integer.valueOf(sc.nextLine());
+		while (!(opcion == 1 || opcion == 2)) {
+			System.out.println("Introduce la opcion que deseas correctamente");
+			opcion = Integer.valueOf(sc.nextLine());
+		}
+		String idAvion;
+		int capacidad=0;
+		if (opcion == 1) {
+			System.out.println("Introduce el identificador");
+			idAvion = sc.nextLine();
+			System.out.println("Introduce la capacidad");
+			capacidad += Integer.valueOf(sc.nextLine());
+
+		} else {
+			System.out.println("Introduce el identificador");
+			idAvion = sc.nextLine();
+			System.out.println("Introduce la capacidad");
+			capacidad = Integer.valueOf(sc.nextLine());
+			System.out.println("Introduce la compañia");
+			String compañia = sc.nextLine();
+		}
+		Avion a=new Avion(idAvion,capacidad);
+
+
+		String menu2 = "a)Asignar Vuelo\r\n" + "b) Obtener el nÃºmero de vuelos\r\n"
+				+ "c) Obtener el nÃºmero de kilÃ³metros\r\n" + "d) Obtener la media de kilÃ³metros por vuelo\r\n"
+				+ "e) Cambio de compaÃ±Ã­a\r\n" + "f) Mostrar informaciÃ³n del aviÃ³nâ€\r\n" + "g) Salir";
+		String opcionMenu2 = "";
+		while (!(opcionMenu2 == "f")) {
+			System.out.println(menu2);
+			System.out.println("Introduce la opcion que deseas");
+			opcionMenu2 = sc.nextLine();
+			switch (opcionMenu2) {
+			case "a": {
+				System.out.println("Introduce el numero de asientos");
+				capacidad = Integer.valueOf(sc.nextLine());
+				System.out.println("Introduce los kilometros");
+				int kmVolados = Integer.valueOf(sc.nextLine());
+				System.out.println(a.asignarVuelo(capacidad, kmVolados));
+				break;
+			}
+			case "b": {
+				System.out.println(a.getNumeroVuelos());
+				break;
+			}
+			case "c": {
+				System.out.println(a.getTotalKm());
+				break;
+			}
+			case "d": {
+				System.out.println(a.getMediaKm());
+				break;
+			}
+			case "e": {
+				System.out.println("Introduce la compaÃ±ia");
+				String compannia = sc.nextLine();
+				a.setCompannia(compannia);
+				break;
+			}
+			case "f": {
+				System.out.println(a.toString());
+				break;
+			}
+			default:
+				System.out.println("Salir");
+				;
+			}
+		}
+
+	}
+
+}

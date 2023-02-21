@@ -1,0 +1,78 @@
+package miPrimeraClase;
+
+import java.util.Scanner;
+
+public class Avion {
+	Scanner sc = new Scanner(System.in);
+
+	private String idAvion;
+
+	private int capacidad;
+
+	private int numVuelos = 0;
+
+	private double kmVolados = 0;
+
+	private String compannia;
+
+	public Avion(String idAvion, int capacidad) {
+		super();
+		this.idAvion = idAvion;
+		this.capacidad = capacidad;
+
+	}
+
+	public Avion(String idAvion, int capacidad, String compannia) {
+		super();
+		this.idAvion = idAvion;
+		this.capacidad = capacidad;
+		this.compannia = compannia;
+	}
+
+	/*
+	 * Asignar Vuelo: se deberá pedir el número de asientos que van a estar ocupados
+	 * en el vuelo, y los kilómetros que se realizarán durante el vuelo. Deberá
+	 * devolver true si se ha podido asignar el vuelo, y false en caso contrario.
+	 */
+	public boolean asignarVuelo(int capacidad, double km) {
+		boolean asignado=false;
+		if ((capacidad < this.capacidad) && (km>0)) {
+			asignado = true;
+		}
+		return asignado;
+	}
+
+	public int getNumeroVuelos() {
+		return numVuelos;
+	}
+
+	public double getTotalKm() {
+		return kmVolados;
+	}
+
+	public double MediaKm() {
+		return kmVolados / numVuelos;
+
+	}
+
+	public String getIdAvion() {
+		return idAvion;
+	}
+
+	public int getCapacidad() {
+		return capacidad;
+	}
+
+	public double getKmVolados() {
+		return kmVolados;
+	}
+
+	public String getCompannia() {
+		return compannia;
+	}
+
+	public void setCompannia(String compannia) {
+		this.compannia = compannia;
+	}
+
+}

@@ -1,0 +1,20 @@
+package MockExam;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int entrada=1;
+		while(entrada>0 || entrada!=0) {
+			System.out.println("Introduce el numero de entradas:");
+			entrada=Integer.valueOf(sc.nextLine());
+			System.out.println("Introduce el dia");
+			String dia=String.valueOf(sc.nextLine());
+			System.out.println("Tienes tarjeta");
+			String tarjeta=String.valueOf(sc.hasNextLine());
+		}
+
+	}
+}

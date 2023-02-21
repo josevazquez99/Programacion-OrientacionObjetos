@@ -1,0 +1,26 @@
+package MockExam;
+
+public class Prueba {
+
+	public static void main(String[] args) {
+		System.out.println(contarPalabrasADN("ATGATCTCGTAAAGGATCTCGAATATGATCTCG"));
+
+	}
+	public static int contarPalabrasADN(String secuencia) {
+	    // Verificar que la cadena solo contenga los caracteres permitidos
+	    if (!secuencia.equals("[CGTA]+")) {
+	        return -1;
+	    }
+	    
+	    // Contar el número de palabras contando las ocurrencias de CGTA
+	    int contador = 0;
+	    int indice = secuencia.indexOf("CGTA");
+	    while (indice != -1) {
+	        contador++;
+	        indice = secuencia.indexOf("CGTA", indice + 1);
+	    }
+	    
+	    return contador;
+	}
+
+}

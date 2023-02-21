@@ -1,0 +1,13 @@
+package geometria;
+
+public class MainMaquina {
+
+	public static void main(String[] args) {
+		String menu;
+		do {
+			
+		} while (!menu="5");
+
+	}
+
+}

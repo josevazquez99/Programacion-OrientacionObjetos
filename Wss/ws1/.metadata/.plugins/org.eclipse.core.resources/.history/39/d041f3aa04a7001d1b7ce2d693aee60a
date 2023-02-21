@@ -1,0 +1,17 @@
+package MockExam;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce el numero de entradas");
+		int entrada=Integer.valueOf(sc.nextLine());
+		while(entrada<0) {
+			System.out.println("Introduce el numero de entradas");
+			 entrada=Integer.valueOf(sc.nextLine());
+		}
+
+	}
+}

@@ -1,0 +1,22 @@
+package calculos;
+
+import java.util.Scanner;
+
+public class MainComplejo {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		String menu;
+		do {
+			System.out.println("1. Sumar complejos: Debe solicitar dos números complejos y mostrar el\r\n"
+					+ "resultado de la suma.\r\n"
+					+ "2. Restar complejos: Debe solicitar dos número complejos y mostrar el\r\n"
+					+ "resultado de la resta.\r\n"
+					+ "3. Salir");
+			menu=sc.nextLine();			
+		} while (!menu="3");
+
+	}
+
+}

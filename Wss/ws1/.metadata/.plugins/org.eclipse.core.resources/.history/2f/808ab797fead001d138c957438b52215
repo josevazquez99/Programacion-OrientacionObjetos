@@ -1,0 +1,16 @@
+package geometria;
+
+public class CuentaCorriente {
+	private double saldoInicial;
+
+	public CuentaCorriente(double saldoInicial) {
+		super();
+		this.saldoInicial = saldoInicial;
+	}
+	public CuentaCorriente() {
+		super();
+		this.saldoInicial =0.0;
+	}
+	
+
+}

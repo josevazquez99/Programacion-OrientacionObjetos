@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\Users\vazquez\DAW_A\Wss\ws1\.metadata\.plugins\org.eclipse.jdt.core
+3501714628.index
+4021352108.index
+1865797976.index
+955800636.index
+2721965719.index

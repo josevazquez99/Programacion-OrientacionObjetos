@@ -1,0 +1,27 @@
+package miPrimeraClase;
+
+import java.util.Scanner;
+
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
+public class MainAvion {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String menu="1. Crear avión sólo con el identificador \n2. Crear avión con el identificador y la compañía.";
+		System.out.println(menu);
+		System.out.println("Introduce la opcion que deseas");
+		int opcion=Integer.valueOf(sc.nextLine());
+		while(opcion!=1 || opcion!=2) {
+			System.out.println("Introduce la opcion que deseas");
+			opcion=Integer.valueOf(sc.nextLine());
+		}
+		if(opcion==1) {
+			System.out.println("Introduce el identificador");
+			String idAvion=sc.nextLine();
+			Avion a=new Avion(idAvion,0);
+		}
+
+	}
+
+}

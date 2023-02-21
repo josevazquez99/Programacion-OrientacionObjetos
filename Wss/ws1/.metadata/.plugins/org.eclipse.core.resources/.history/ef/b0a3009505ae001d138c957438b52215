@@ -1,0 +1,48 @@
+package geometria;
+
+public class Maquina {
+	private int depositoCafe;
+	private int depositoLeche;
+	private int depositoVasos;
+	private double monedero;
+
+	public Maquina(int depositoCafe, int depositoLeche, int depositoVasos, double monedero) {
+		super();
+		this.depositoCafe = depositoCafe;
+		this.depositoLeche = depositoLeche;
+		this.depositoVasos = depositoVasos;
+		this.monedero = monedero;
+	}
+
+	public Maquina() {
+		super();
+		this.depositoCafe = 50;
+		this.depositoLeche = 50;
+		this.depositoVasos = 80;
+	}
+
+	public void getLlenarDepositos() {
+		depositoCafe = 50;
+		depositoLeche = 50;
+		depositoVasos = 80;
+	}
+
+	public void getVaciarMonedero() {
+		monedero = 0;
+	}
+	public String getEstadoMaquina() {
+		String resultado;
+		resultado="Hay " + depositoCafe +" deposito Cafe"+ depositoLeche +" deposito Leche"+ depositoVasos +" deposito Vasos y el monedero es de " + monedero;
+		return resultado;
+	}
+	
+	public String getServirCafeLeche() {
+		String mensaje="";
+		if(depositoLeche<0) {
+			mensaje="El deposito esta vacio";
+		}else {
+			depositoLeche++;
+			mensaje="Producto servido";
+		}return mensaje;
+	}
+}

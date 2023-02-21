@@ -1,0 +1,10 @@
+package geometria;
+
+public class Maquina {
+	private int depositoCafe;
+	private int depositoLeche;
+	private int depositoVasos;
+
+	
+
+}

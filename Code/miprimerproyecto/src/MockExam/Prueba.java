@@ -1,0 +1,49 @@
+package MockExam;
+
+public class Prueba {
+
+	public static void main(String[] args) {
+		System.out.println(contarPalabrasADN("ATGATCTCGTAAAGGATCTCGAATATGATCTCG"));
+		System.out.println(descomprimirCadena("A3G2T1C3"));
+		System.out.println(comprimirCadena("AAAGGTCCC"));
+
+	}
+	public static int contarPalabrasADN(String secuencia) {
+	    // Contar el número de palabras contando las ocurrencias de CGTA
+	    int contador = 0;
+	    int indice = secuencia.indexOf("CGTA");
+	    while (indice != -1) {
+	        contador++;
+	        indice = secuencia.indexOf("CGTA", indice + 1);
+	    }
+	    
+	    return contador;
+	}
+
+
+public static String descomprimirCadena(String cadenaComprimida) {
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < cadenaComprimida.length(); i += 2) {
+        char letra = cadenaComprimida.charAt(i);
+        int repeticiones = Character.getNumericValue(cadenaComprimida.charAt(i+1));
+        for (int j = 0; j < repeticiones; j++) {
+            sb.append(letra);
+        }
+    }
+    return sb.toString();
+}
+public static String comprimirCadena(String cadena) {
+    StringBuilder sb = new StringBuilder();
+    int contador = 1;
+    for (int i = 0; i < cadena.length(); i++) {
+        if (i == cadena.length() - 1 || cadena.charAt(i) != cadena.charAt(i+1)) {
+            sb.append(cadena.charAt(i)).append(contador);
+            contador = 1;
+        } else {
+            contador++;
+        }
+    }
+    return sb.toString();
+}
+
+}

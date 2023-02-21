@@ -1,0 +1,31 @@
+package geometria;
+
+import java.util.Scanner;
+
+public class Main {
+
+	
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("---------------------");
+		Rectangulo r=new Rectangulo();
+		r.setanchura(-12.2);
+		r.setlongitud(-12.2);
+		System.out.println(r.calcularArea());
+		System.out.println(r.calculaPerimetro());
+		System.out.println("---------------------");
+		String menu=("1. Hacer un reintegro, se pedirá la cantidad a retirar.\r\n"
+				+ "2. Hacer un ingreso, se pedirá la cantidad a ingresar.\r\n"
+				+ "3. Consultar el saldo y el número de reintegros e ingresos realizados.\r\n"
+				+ "4. Finalizar las operaciones. Debe confirmar si realmente desea salir e\r\n"
+				+ "informar del saldo al final de todas las operaciones");
+		int opcion=Integer.valueOf(sc.nextLine());
+		while (opcion!=5) {
+			System.out.println(menu);
+			 opcion=Integer.valueOf(sc.nextLine());
+
+		}
+		
+	}
+}

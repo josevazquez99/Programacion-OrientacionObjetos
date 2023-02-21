@@ -1,0 +1,24 @@
+package geometria;
+
+public class Maquina {
+	private int depositoCafe;
+	private int depositoLeche;
+	private int depositoVasos;
+	private double monedero;
+	public Maquina(int depositoCafe, int depositoLeche, int depositoVasos, double monedero) {
+		super();
+		this.depositoCafe = depositoCafe;
+		this.depositoLeche = depositoLeche;
+		this.depositoVasos = depositoVasos;
+		this.monedero = monedero;
+	}
+	public Maquina() {
+		super();
+		this.depositoCafe = 50;
+		this.depositoLeche = 50;
+		this.depositoVasos = 80;
+	}
+
+	
+
+}

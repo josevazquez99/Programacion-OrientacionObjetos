@@ -1,0 +1,23 @@
+package MockExam;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce el numero de entradas");
+		int entrada = Integer.valueOf(sc.nextLine());
+		while (entrada < 0) {
+			System.out.println("Introduce el numero de entradas");
+			entrada = Integer.valueOf(sc.nextLine());
+		}
+		System.out.println("Introduce el dia");
+		String dia = String.valueOf(sc.nextLine());
+		while (dia != "L" || dia != "M" || dia != "X" || dia != "J" || dia != "V" || dia != "S" || dia != "D") {
+			System.out.println("Introduce el dia");
+			dia = String.valueOf(sc.nextLine());
+		}
+
+	}
+}

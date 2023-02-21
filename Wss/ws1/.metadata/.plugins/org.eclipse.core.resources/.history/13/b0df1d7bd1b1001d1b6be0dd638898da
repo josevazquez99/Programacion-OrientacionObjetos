@@ -1,0 +1,11 @@
+package calculos;
+
+public class MainComplejo {
+
+	public static void main(String[] args) {
+		Complejo com1=new Complejo(12,12);
+		Complejo com2=new Complejo(7,9);
+
+	}
+
+}

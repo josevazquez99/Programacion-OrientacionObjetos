@@ -1,0 +1,82 @@
+package geometria;
+
+import java.util.Objects;
+
+public class Complejo {
+	
+	private  double parteReal = 0.0;
+	private  double parteImaginaria = 0.0;
+	private  double i=0.0;
+	
+	public Complejo() {
+		super();
+	}
+
+	public Complejo(double parteReal, double parteImaginaria, double i) {
+		super();
+		this.parteReal = parteReal;
+		this.parteImaginaria = parteImaginaria;
+		this.i = i;
+	}
+
+	public double getParteReal() {
+		return parteReal;
+	}
+
+	public void setParteReal(double parteReal) {
+		this.parteReal = parteReal;
+	}
+
+	public double getParteImaginaria() {
+		return parteImaginaria;
+	}
+
+	public void setParteImaginaria(double parteImaginaria) {
+		this.parteImaginaria = parteImaginaria;
+	}
+
+	public double getI() {
+		return i;
+	}
+
+	public void setI(double i) {
+		this.i = i;
+	}
+	
+	public double getSuma(double parteReal,double parteImaginaria,double i) {
+		double resultado=0;
+		resultado=this.parteReal+this.parteImaginaria*this.i;
+		return resultado;
+	}
+	public double getResta(double parteReal,double parteImaginaria,double i) {
+		double resultado=0;
+		resultado=this.parteReal-this.parteImaginaria*this.i;
+		return resultado;
+	}
+	
+	public String getMostrarInformacion(double parteReal,double parteImaginaria) {
+		String resultado="";
+		resultado="( " + parteReal + " , " + parteImaginaria + " )";
+		return resultado;
+	}
+
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Complejo other = (Complejo) obj;
+		return Double.doubleToLongBits(i) == Double.doubleToLongBits(other.i)
+				&& Double.doubleToLongBits(parteImaginaria) == Double.doubleToLongBits(other.parteImaginaria)
+				&& Double.doubleToLongBits(parteReal) == Double.doubleToLongBits(other.parteReal);
+	}
+	
+	
+	
+	
+
+	
+
+}

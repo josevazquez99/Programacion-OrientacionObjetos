@@ -1,0 +1,16 @@
+package calculos;
+
+import java.util.Scanner;
+
+public class MainComplejo {
+
+	public static void main(String[] args) {
+		Complejo com1=new Complejo(12,12);
+		Complejo com2=new Complejo(7,9);
+		System.out.println(com1.getSuma(com2));
+		
+		Scanner sc = new Scanner(System.in);
+
+	}
+
+}

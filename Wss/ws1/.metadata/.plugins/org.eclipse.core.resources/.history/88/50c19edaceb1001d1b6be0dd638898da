@@ -1,0 +1,11 @@
+package geometria;
+
+public class Complejo {
+	
+	private final int parteReal = 0;
+	private final int parteImaginaria = 0;
+	private final int i=0;
+
+	
+
+}

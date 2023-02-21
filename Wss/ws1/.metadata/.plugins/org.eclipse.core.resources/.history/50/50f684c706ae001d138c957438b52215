@@ -1,0 +1,29 @@
+package geometria;
+
+import java.util.Scanner;
+
+public class MainMaquina {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String menu;
+		do {
+			System.out.println("1. Servir café solo (1 euro)\r\n" + "2. Servir leche (0,8 euros)\r\n"
+					+ "3. Servir café con leche (1,5 euros)\r\n"
+					+ "4. Consultar estado máquina. Aparecen los datos de los depósitos y del\r\n" + "monedero\r\n"
+					+ "5. Apagar máquina y salir");
+			menu = sc.nextLine();
+			switch (menu) {
+			case "1": {
+
+				break;
+			}
+			default:
+				System.out.println("Dato mal introducido");
+			}
+
+		} while (!menu.equals("5"));
+
+	}
+
+}

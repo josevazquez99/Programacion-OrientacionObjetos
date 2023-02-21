@@ -1,0 +1,49 @@
+package geometria;
+
+import java.util.Scanner;
+
+public class Main {
+
+	
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("---------------------");
+		Rectangulo r=new Rectangulo();
+		r.setanchura(-12.2);
+		r.setlongitud(-12.2);
+		System.out.println(r.calcularArea());
+		System.out.println(r.calculaPerimetro());
+		System.out.println("---------------------");
+		String menu;
+		do {
+			System.out.println("""
+					1. Crear avion solo con el identificador.
+					2. Crear avion con el identificador y la compañia
+					3. Salir""");
+			menu = sc.nextLine();
+			switch (menu) {
+
+			case "1" -> {
+				System.out.println("Introduzca identificador");
+				identificador = sc.nextLine();
+				System.out.println("Introduzca capacidad de nuevo avion");
+				capacidad = Integer.parseInt(sc.nextLine());
+			}
+
+			case "2" -> {
+
+				System.out.println("Introduzca identificador");
+				identificador = sc.nextLine();
+				System.out.println("Introduzca compañia a la que pertenece");
+				compania = sc.nextLine();
+				System.out.println("Introduzca capacidad de nuevo avion");
+				capacidad = Integer.parseInt(sc.nextLine());
+
+			}
+
+			}
+		} while (!menu.equals("5"));
+		
+	}
+}

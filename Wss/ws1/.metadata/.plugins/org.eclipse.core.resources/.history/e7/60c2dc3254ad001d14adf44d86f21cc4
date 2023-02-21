@@ -1,0 +1,74 @@
+package miPrimeraClase;
+
+
+public class Avion {
+
+	private String idAvion;
+	private int capacidad;
+	private  int numVuelos = 0;
+	private  double kmVolados = 0;
+	private  String compannia;
+
+	public Avion(String idAvion, int capacidad) {
+		super();
+		this.idAvion = idAvion;
+		this.capacidad = capacidad;
+
+	}
+
+	public Avion(String idAvion,String compannia,int capacidad) {
+		super();
+		this.idAvion = idAvion;
+		this.compannia = compannia;
+		this.capacidad = capacidad;
+	}
+
+	public static boolean asignarVuelo(int capacidad, double kmVolados) {
+		boolean asignado=false;
+		if (capacidad >0 && capacidad> this.capacidad && kmVolados>0) {
+			asignado = true;
+			capacidad++;
+			kmVolados++;
+		}
+		return asignado;
+	}
+
+	public static int getNumeroVuelos() {
+		return numVuelos;
+	}
+
+	public static double getTotalKm() {
+		double TotalKm=0;
+		TotalKm+=kmVolados;
+		return TotalKm;
+	}
+
+	public static double getMediaKm() {
+		double resultado;
+		resultado=this.kmVolados/this.numVuelos;
+		return resultado;
+
+	}
+
+	public String getIdAvion() {
+		return idAvion;
+	}
+
+	public int getCapacidad() {
+		return capacidad;
+	}
+
+	public double getKmVolados() {
+		return kmVolados;
+	}
+
+	public String getCompannia() {
+		return compannia;
+	}
+
+	public static void setCompannia(String compannia) {
+		compannia = compannia;
+	}
+
+}
+

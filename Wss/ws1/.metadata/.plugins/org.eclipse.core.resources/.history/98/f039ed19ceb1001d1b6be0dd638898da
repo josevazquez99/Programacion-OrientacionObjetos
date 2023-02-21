@@ -1,0 +1,80 @@
+package geometria;
+
+public class Maquina {
+	private int depositoCafe;
+	private int depositoLeche;
+	private int depositoVasos;
+	private double monedero;
+	private final double precioCafe=1.0;
+	private final double precioLeche=0.8;
+	private final double precioCafeLeche=1.5;
+
+
+	public Maquina(int depositoCafe, int depositoLeche, int depositoVasos, double monedero) {
+		super();
+		this.depositoCafe = depositoCafe;
+		this.depositoLeche = depositoLeche;
+		this.depositoVasos = depositoVasos;
+		this.monedero = monedero;
+	}
+
+	public Maquina(double monedero) {
+		super();
+		this.depositoCafe = 50;
+		this.depositoLeche = 50;
+		this.depositoVasos = 80;
+		this.monedero=monedero;
+	}
+
+	public void getLlenarDepositos() {
+		this.depositoCafe = 50;
+		this.depositoLeche = 50;
+		this.depositoVasos = 80;
+	}
+
+	public void getVaciarMonedero() {
+		this.monedero = 0;
+	}
+	public String getEstadoMaquina() {
+		String resultado;
+		resultado="Hay " + depositoCafe +" deposito Cafe "+ depositoLeche +" deposito Leche "+ depositoVasos +" deposito Vasos y el monedero es de " + monedero;
+		return resultado;
+	}
+	
+	public String getServirLeche() {
+		String mensaje="";
+		if(depositoLeche<0) {
+			mensaje="El deposito esta vacio";
+		}else {
+			monedero=monedero-precioLeche;
+			depositoLeche--;
+			depositoVasos--;
+			mensaje="Producto servido";
+		}return mensaje;
+	}
+	public String getServirCafe() {
+		String mensaje="";
+		if(depositoCafe<0) {
+			mensaje="El deposito esta vacio";
+		}else {
+			monedero=monedero-precioCafe;
+			depositoCafe--;
+			depositoVasos--;
+
+			mensaje="Producto servido";
+		}return mensaje;
+	}
+	public String getServirCafeLeche() {
+		String mensaje="";
+		if(depositoCafe<0 || depositoLeche<0 ) {
+			mensaje="El deposito esta vacio";
+		}else {
+			monedero=monedero-precioCafeLeche;
+			depositoLeche--;
+			depositoCafe--;
+			depositoVasos--;
+
+			mensaje="Producto servido";
+		}return mensaje;
+	}
+}

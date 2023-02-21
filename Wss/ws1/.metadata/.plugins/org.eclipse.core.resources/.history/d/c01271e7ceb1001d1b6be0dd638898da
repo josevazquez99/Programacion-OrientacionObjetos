@@ -1,0 +1,19 @@
+package geometria;
+
+public class Complejo {
+	
+	private  double parteReal = 0.0;
+	private  double parteImaginaria = 0.0;
+	private  double i=0.0;
+	
+	public Complejo() {
+		super();
+	}
+	
+	
+	
+	
+
+	
+
+}

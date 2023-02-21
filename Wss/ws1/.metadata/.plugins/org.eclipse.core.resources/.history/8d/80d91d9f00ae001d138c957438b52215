@@ -1,0 +1,40 @@
+package geometria;
+
+public class CuentaCorriente {
+	private double saldoInicial;
+
+	public CuentaCorriente(double saldoInicial) {
+		super();
+		this.saldoInicial = saldoInicial;
+	}
+
+	public CuentaCorriente() {
+		super();
+		this.saldoInicial = 0.0;
+	}
+
+	public double getSaldoInicial() {
+		return saldoInicial;
+	}
+
+	public void setSaldoInicial(double saldoInicial) {
+		this.saldoInicial = saldoInicial;
+	}
+
+	public void setIngreso(double ingreso) {
+		{if (ingreso <= 0)
+				System.out.println("El ingreso debe ser superior a cero euros");
+			else
+				saldoInicial = saldoInicial + ingreso;
+		}
+	}
+	  public void setReintegro (double reintegro)
+	    {
+	        if (reintegro <= 0)
+	            System.out.println("El reintegro debe ser superior a cero euros");
+	        else
+	        	saldoInicial = saldoInicial - reintegro;
+	    }
+	 
+
+}
